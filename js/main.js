@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (modalName) modalName.textContent = card.dataset.name || '';
             if (modalCountry) modalCountry.textContent = card.dataset.country || '';
             if (modalGenre) modalGenre.textContent = card.dataset.genre || '';
-            if (modalBio) modalBio.textContent = card.dataset.bio || '';
+            if (modalBio) modalBio.innerHTML = card.dataset.bio || '';
             modalOverlay?.classList.add('open');
             document.body.style.overflow = 'hidden';
         });

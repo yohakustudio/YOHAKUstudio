@@ -198,7 +198,7 @@ h4 {
   transition: filter 0.3s ease, mix-blend-mode 0.3s ease;
 }
 
-.header--dark:not(.scrolled) .header__logo img {
+.header--dark .header__logo img {
   filter: invert(1);
   mix-blend-mode: screen;
 }
