@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="YOHAKUstudio オンラインストア — ソフビ・アートトイの購入。海外発送対応。">
+    <title>Store — YOHAKU studio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header" id="header">
+        <a href="index.html" class="header__logo"><img src="images/logo.png" alt="YOHAKU studio"></a>
+        <nav class="nav">
+            <a href="index.html" class="nav__link" data-i18n="nav_home">Home</a>
+            <a href="about.html" class="nav__link" data-i18n="nav_about">About</a>
+            <a href="artists.html" class="nav__link" data-i18n="nav_artists">Artists</a>
+            <a href="store.html" class="nav__link" data-i18n="nav_store">Store</a>
+            <a href="news.html" class="nav__link" data-i18n="nav_news">News</a>
+            <a href="contact.html" class="nav__link" data-i18n="nav_contact">Contact</a>
+            <div class="lang-switcher">
+                <button class="lang-btn" data-lang="jp">JP</button><span class="lang-sep">|</span>
+                <button class="lang-btn" data-lang="en">EN</button><span class="lang-sep">|</span>
+                <button class="lang-btn" data-lang="th">TH</button>
+            </div>
+            <button class="cart-btn" id="cart-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <path d="M16 10a4 4 0 01-8 0" />
+                </svg>
+                <span data-i18n="nav_cart">カート</span>
+                <span class="cart-count" style="display:none">0</span>
+            </button>
+        </nav>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </header>
+    <nav class="mobile-nav" id="mobile-nav">
+        <a href="index.html" class="nav__link" data-i18n="nav_home">Home</a>
+        <a href="about.html" class="nav__link" data-i18n="nav_about">About</a>
+        <a href="artists.html" class="nav__link" data-i18n="nav_artists">Artists</a>
+        <a href="store.html" class="nav__link" data-i18n="nav_store">Store</a>
+        <a href="news.html" class="nav__link" data-i18n="nav_news">News</a>
+        <a href="contact.html" class="nav__link" data-i18n="nav_contact">Contact</a>
+        <div class="lang-switcher">
+            <button class="lang-btn" data-lang="jp">JP</button><span class="lang-sep">|</span>
+            <button class="lang-btn" data-lang="en">EN</button><span class="lang-sep">|</span>
+            <button class="lang-btn" data-lang="th">TH</button>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <div class="container">
+            <p class="page-hero__label fade-in" data-i18n="store_label">Store</p>
+            <h1 class="page-hero__title fade-in" data-i18n="store_title">オンラインストア</h1>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+
+            <!-- International Shipping Notice -->
+            <div class="fade-in"
+                style="display:flex; align-items:center; gap:0.75rem; padding: 0.75rem var(--space-sm); border: 1px solid var(--gray-200); margin-bottom: var(--space-lg); font-size:0.75rem; color:var(--gray-600); letter-spacing:0.05em;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="12" cy="12" r="10" />
+                    <path
+                        d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+                </svg>
+                <span data-i18n="store_intl_note">海外発送対応 / International Shipping Available</span>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="filter-tabs fade-in">
+                <button class="filter-tab active" data-filter="all" data-i18n="store_filter_all">All</button>
+                <button class="filter-tab" data-filter="sofubi" data-i18n="store_filter_sofubi">Sofubi</button>
+                <button class="filter-tab" data-filter="toy" data-i18n="store_filter_toy">Art Toy</button>
+                <button class="filter-tab" data-filter="other" data-i18n="store_filter_other">Other</button>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="grid-4">
+
+                <article class="product-card fade-in" data-product data-category="sofubi" data-product-id="p001"
+                    data-product-name="NOIR — Black Edition" data-product-artist="Kenzo Yamada"
+                    data-product-price="28000" data-product-img="images/product-noir.png">
+                    <div class="product-card__img-wrap">
+                        <img class="product-card__img" src="images/product-noir.png" alt="NOIR Black Edition">
+                    </div>
+                    <div class="product-card__body">
+                        <p class="product-card__artist">Kenzo Yamada</p>
+                        <h2 class="product-card__name">NOIR — Black Edition</h2>
+                        <p class="product-card__price">¥28,000</p>
+                        <p style="font-size:0.65rem;color:var(--gray-400);margin-top:0.2rem;" data-i18n="store_limited">
+                            限定</p>
+                        <button class="product-card__add add-to-cart">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M12 5v14M5 12h14" />
+                            </svg>
+                            <span data-i18n="store_add_cart">カートに追加</span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="product-card fade-in" data-product data-category="sofubi" data-product-id="p002"
+                    data-product-name="HANABI — Lavender" data-product-artist="Mika Hana" data-product-price="18000"
+                    data-product-img="images/artist-mika.png">
+                    <div class="product-card__img-wrap">
+                        <img class="product-card__img" src="images/artist-mika.png" alt="HANABI Lavender">
+                    </div>
+                    <div class="product-card__body">
+                        <p class="product-card__artist">Mika Hana</p>
+                        <h2 class="product-card__name">HANABI — Lavender</h2>
+                        <p class="product-card__price">¥18,000</p>
+                        <button class="product-card__add add-to-cart">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M12 5v14M5 12h14" />
+                            </svg>
+                            <span data-i18n="store_add_cart">カートに追加</span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="product-card fade-in" data-product data-category="toy" data-product-id="p003"
+                    data-product-name="YAKSHA — Bangkok Red" data-product-artist="Leo Rattana"
+                    data-product-price="45000" data-product-img="images/artist-leo.png">
+                    <div class="product-card__img-wrap">
+                        <img class="product-card__img" src="images/artist-leo.png" alt="YAKSHA Bangkok Red">
+                    </div>
+                    <div class="product-card__body">
+                        <p class="product-card__artist">Leo Rattana</p>
+                        <h2 class="product-card__name">YAKSHA — Bangkok Red</h2>
+                        <p class="product-card__price">¥45,000</p>
+                        <p style="font-size:0.65rem;color:var(--gray-400);margin-top:0.2rem;" data-i18n="store_limited">
+                            限定</p>
+                        <button class="product-card__add add-to-cart">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M12 5v14M5 12h14" />
+                            </svg>
+                            <span data-i18n="store_add_cart">カートに追加</span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="product-card fade-in" data-product data-category="sofubi" data-product-id="p004"
+                    data-product-name="ONI — Navy Gold" data-product-artist="Kenzo Yamada" data-product-price="38000"
+                    data-product-img="images/artist-kenzo.png">
+                    <div class="product-card__img-wrap">
+                        <img class="product-card__img" src="images/artist-kenzo.png" alt="ONI Navy Gold">
+                    </div>
+                    <div class="product-card__body">
+                        <p class="product-card__artist">Kenzo Yamada</p>
+                        <h2 class="product-card__name">ONI — Navy Gold</h2>
+                        <p class="product-card__price">¥38,000</p>
+                        <button class="product-card__add add-to-cart">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M12 5v14M5 12h14" />
+                            </svg>
+                            <span data-i18n="store_add_cart">カートに追加</span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="product-card fade-in" data-product data-category="toy" data-product-id="p005"
+                    data-product-name="SAKURA — Pink Glow" data-product-artist="Mika Hana" data-product-price="22000"
+                    data-product-img="images/artist-mika.png">
+                    <div class="product-card__img-wrap">
+                        <img class="product-card__img" src="images/artist-mika.png" alt="SAKURA Pink Glow">
+                    </div>
+                    <div class="product-card__body">
+                        <p class="product-card__artist">Mika Hana</p>
+                        <h2 class="product-card__name">SAKURA — Pink Glow</h2>
+                        <p class="product-card__price">¥22,000</p>
+                        <button class="product-card__add add-to-cart">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M12 5v14M5 12h14" />
+                            </svg>
+                            <span data-i18n="store_add_cart">カートに追加</span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="product-card fade-in" data-product data-category="toy" data-product-id="p006"
+                    data-product-name="KINNARA — Gold" data-product-artist="Leo Rattana" data-product-price="55000"
+                    data-product-img="images/artist-leo.png">
+                    <div class="product-card__img-wrap">
+                        <img class="product-card__img" src="images/artist-leo.png" alt="KINNARA Gold">
+                    </div>
+                    <div class="product-card__body">
+                        <p class="product-card__artist">Leo Rattana</p>
+                        <h2 class="product-card__name">KINNARA — Gold Edition</h2>
+                        <p class="product-card__price">¥55,000</p>
+                        <p style="font-size:0.65rem;color:var(--gray-400);margin-top:0.2rem;" data-i18n="store_limited">
+                            限定</p>
+                        <button class="product-card__add add-to-cart">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M12 5v14M5 12h14" />
+                            </svg>
+                            <span data-i18n="store_add_cart">カートに追加</span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="product-card fade-in" data-product data-category="sofubi" data-product-id="p007"
+                    data-product-name="BLANC — White" data-product-artist="Kenzo Yamada" data-product-price="32000"
+                    data-product-img="images/product-noir.png">
+                    <div class="product-card__img-wrap">
+                        <img class="product-card__img" src="images/product-noir.png" alt="BLANC White"
+                            style="filter:invert(1)">
+                    </div>
+                    <div class="product-card__body">
+                        <p class="product-card__artist">Kenzo Yamada</p>
+                        <h2 class="product-card__name">BLANC — White Edition</h2>
+                        <p class="product-card__price">¥32,000</p>
+                        <button class="product-card__add add-to-cart">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M12 5v14M5 12h14" />
+                            </svg>
+                            <span data-i18n="store_add_cart">カートに追加</span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="product-card fade-in" data-product data-category="other" data-product-id="p008"
+                    data-product-name="YOHAKU Tote Bag" data-product-artist="YOHAKUstudio" data-product-price="4800"
+                    data-product-img="images/logo.png">
+                    <div class="product-card__img-wrap"
+                        style="background:var(--black); display:flex; align-items:center; justify-content:center;">
+                        <img class="product-card__img" src="images/logo.png" alt="YOHAKU Tote"
+                            style="width:60%; height:auto; object-fit:contain; aspect-ratio:auto; filter:invert(1);">
+                    </div>
+                    <div class="product-card__body">
+                        <p class="product-card__artist">YOHAKUstudio</p>
+                        <h2 class="product-card__name">YOHAKU Tote Bag</h2>
+                        <p class="product-card__price">¥4,800</p>
+                        <button class="product-card__add add-to-cart">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M12 5v14M5 12h14" />
+                            </svg>
+                            <span data-i18n="store_add_cart">カートに追加</span>
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <p class="logo-text">YOHAKU studio</p>
+                    <p data-i18n="footer_tagline">Art Toy × Global × Community</p>
+                </div>
+                <nav class="footer__nav">
+                    <h4 data-i18n="footer_pages">ページ</h4>
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                        <li><a href="about.html" data-i18n="nav_about">About</a></li>
+                        <li><a href="artists.html" data-i18n="nav_artists">Artists</a></li>
+                        <li><a href="store.html" data-i18n="nav_store">Store</a></li>
+                        <li><a href="news.html" data-i18n="nav_news">News</a></li>
+                        <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer__nav">
+                    <h4 data-i18n="footer_legal">Legal</h4>
+                    <ul>
+                        <li><a href="#" data-i18n="footer_privacy">プライバシーポリシー</a></li>
+                        <li><a href="#" data-i18n="footer_terms">利用規約</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__bottom">
+                <span data-i18n="footer_copy">© 2025 YOHAKUstudio. All rights reserved.</span>
+                <div class="lang-switcher">
+                    <button class="lang-btn" data-lang="jp">JP</button><span class="lang-sep">|</span>
+                    <button class="lang-btn" data-lang="en">EN</button><span class="lang-sep">|</span>
+                    <button class="lang-btn" data-lang="th">TH</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-drawer" id="cart-drawer">
+        <div class="cart-drawer__header">
+            <p class="cart-drawer__title" data-i18n="cart_title">カート</p>
+            <button class="cart-drawer__close" id="cart-close">✕</button>
+        </div>
+        <div class="cart-drawer__body" id="cart-body"></div>
+        <div class="cart-drawer__footer">
+            <div class="cart-total">
+                <span class="cart-total__label" data-i18n="cart_total">小計</span>
+                <span class="cart-total__amount" id="cart-total-amount">¥0</span>
+            </div>
+            <button class="btn btn--filled cart-checkout-btn"><span data-i18n="cart_checkout">チェックアウトへ</span></button>
+        </div>
+    </aside>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

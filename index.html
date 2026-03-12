@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="YOHAKUstudio — 世界のアートトイ・ソフビを繋ぐ、余白のあるギャラリー。">
+  <title>YOHAKU studio — Art Toy Gallery &amp; Store</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/hero-v2.css">
+
+</head>
+
+<body>
+
+  <!-- ═══ HEADER ═══════════════════════════════════════════════ -->
+  <header class="header header--dark" id="header">
+    <a href="index.html" class="header__logo">
+      <img src="images/logo.png" alt="YOHAKU studio" style="filter:invert(1);">
+    </a>
+    <nav class="nav">
+      <a href="index.html" class="nav__link" data-i18n="nav_home">Home</a>
+      <a href="about.html" class="nav__link" data-i18n="nav_about">About</a>
+      <a href="artists.html" class="nav__link" data-i18n="nav_artists">Artists</a>
+      <a href="store.html" class="nav__link" data-i18n="nav_store">Store</a>
+      <a href="news.html" class="nav__link" data-i18n="nav_news">News</a>
+      <a href="contact.html" class="nav__link" data-i18n="nav_contact">Contact</a>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="jp">JP</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-btn" data-lang="th">TH</button>
+      </div>
+      <button class="cart-btn" id="cart-btn" aria-label="Open cart">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <path d="M16 10a4 4 0 01-8 0" />
+        </svg>
+        <span data-i18n="nav_cart">カート</span>
+        <span class="cart-count" style="display:none">0</span>
+      </button>
+    </nav>
+    <button class="hamburger hamburger--light" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Mobile Nav -->
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="index.html" class="nav__link" data-i18n="nav_home">Home</a>
+    <a href="about.html" class="nav__link" data-i18n="nav_about">About</a>
+    <a href="artists.html" class="nav__link" data-i18n="nav_artists">Artists</a>
+    <a href="store.html" class="nav__link" data-i18n="nav_store">Store</a>
+    <a href="news.html" class="nav__link" data-i18n="nav_news">News</a>
+    <a href="contact.html" class="nav__link" data-i18n="nav_contact">Contact</a>
+    <div class="lang-switcher">
+      <button class="lang-btn" data-lang="jp">JP</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <span class="lang-sep">|</span>
+      <button class="lang-btn" data-lang="th">TH</button>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO (REDESIGNED) ════════════════════════════════════ -->
+  <section class="hero-v2" id="hero">
+
+    <!-- Canvasボールアニメーション -->
+    <canvas class="hero-v2__canvas" id="hero-canvas"></canvas>
+
+    <!-- 中央コンテンツ -->
+    <div class="hero-v2__center">
+      <!-- ブランドロゴ（テキストのみ） -->
+      <div class="hero-v2__logo-wrap">
+        <div class="hero-v2__logo-inner">
+          <div class="hero-v2__logo-text">
+            <span class="hero-v2__logo-yohaku">YOHAKU</span>
+            <span class="hero-v2__logo-studio">studio</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- タグライン -->
+      <p class="hero-v2__eyebrow" data-i18n="hero_eyebrow">アート・トイ / ソフビ / デザイナーズトイ</p>
+      <div class="hero-v2__divider"></div>
+      <!-- メインコピー -->
+      <p class="hero-v2__copy" data-i18n="hero_title">余白が、世界を繋ぐ。</p>
+      <p class="hero-v2__sub" data-i18n="hero_subtitle">アーティストと出会い、アートと繋がる。</p>
+      <!-- CTA -->
+      <div class="hero-v2__actions">
+        <a href="artists.html" class="hero-v2__cta-primary">
+          <span data-i18n="hero_cta">Explore Gallery</span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+        <a href="store.html" class="hero-v2__cta-secondary">
+          <span data-i18n="home_store_link">ストアを見る</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- スクロール -->
+    <div class="hero-v2__scroll">
+      <div class="hero-v2__scroll-line"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- Ticker — シームレスエンドレスループ -->
+  <div class="ticker">
+    <div class="ticker__track">
+      <!-- Set 1 -->
+      <div class="ticker__set" aria-hidden="false">
+        <span class="ticker__item">YOHAKU studio</span>
+        <span class="ticker__item">Art Toy</span>
+        <span class="ticker__item">Sofubi</span>
+        <span class="ticker__item">Designer Toy</span>
+        <span class="ticker__item">Japan × Thailand × World</span>
+        <span class="ticker__item">余白</span>
+        <span class="ticker__item">Gallery</span>
+      </div>
+      <!-- Set 2（完全複製・aria-hidden） -->
+      <div class="ticker__set" aria-hidden="true">
+        <span class="ticker__item">YOHAKU studio</span>
+        <span class="ticker__item">Art Toy</span>
+        <span class="ticker__item">Sofubi</span>
+        <span class="ticker__item">Designer Toy</span>
+        <span class="ticker__item">Japan × Thailand × World</span>
+        <span class="ticker__item">余白</span>
+        <span class="ticker__item">Gallery</span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- ═══ FEATURED ARTISTS ══════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-header__left">
+          <p class="section-header__num" data-i18n="home_featured_label">01 — Featured</p>
+          <h2 class="section-header__title" data-i18n="home_featured_title">注目のアーティスト</h2>
+        </div>
+        <a href="artists.html" class="btn fade-in">
+          <span data-i18n="home_featured_link">すべてのアーティストを見る</span>
+        </a>
+      </div>
+      <div class="grid-3">
+        <article class="artist-card fade-in" data-modal data-img="images/artist-kenzo.png" data-name="Kenzo Yamada"
+          data-country="Japan" data-genre="Sofubi / Dark Art"
+          data-bio="東京出身。日本の妖怪・鬼をモチーフにした迫力のソフビ作品を制作。国内外のコレクターから高い評価を受ける。">
+          <div class="artist-card__img-wrap">
+            <img class="artist-card__img" src="images/artist-kenzo.png" alt="Kenzo Yamada">
+          </div>
+          <div class="artist-card__body">
+            <p class="artist-card__country">Japan</p>
+            <h3 class="artist-card__name">Kenzo Yamada</h3>
+            <p class="artist-card__genre">Sofubi / Dark Art</p>
+          </div>
+        </article>
+        <article class="artist-card fade-in" data-modal data-img="images/artist-mika.png" data-name="Mika Hana"
+          data-country="Japan" data-genre="Kawaii / Soft Vinyl"
+          data-bio="大阪出身。パステルカラーとカワイイ美学を融合させたソフビキャラクターで人気。SNSを中心に世界中にファンを持つ。">
+          <div class="artist-card__img-wrap">
+            <img class="artist-card__img" src="images/artist-mika.png" alt="Mika Hana">
+          </div>
+          <div class="artist-card__body">
+            <p class="artist-card__country">Japan</p>
+            <h3 class="artist-card__name">Mika Hana</h3>
+            <p class="artist-card__genre">Kawaii / Soft Vinyl</p>
+          </div>
+        </article>
+        <article class="artist-card fade-in" data-modal data-img="images/artist-leo.png" data-name="Leo Rattana"
+          data-country="Thailand" data-genre="Street Art Toy"
+          data-bio="バンコク出身。タイの伝統神話とストリートアートを融合させた大型ソフビ作品が世界的に注目を集めている。">
+          <div class="artist-card__img-wrap">
+            <img class="artist-card__img" src="images/artist-leo.png" alt="Leo Rattana">
+          </div>
+          <div class="artist-card__body">
+            <p class="artist-card__country">Thailand</p>
+            <h3 class="artist-card__name">Leo Rattana</h3>
+            <p class="artist-card__genre">Street Art Toy</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ NEW ARRIVALS ══════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-header__left">
+          <p class="section-header__num" data-i18n="home_store_label">02 — Store</p>
+          <h2 class="section-header__title" data-i18n="home_store_title">最新入荷</h2>
+        </div>
+        <a href="store.html" class="btn fade-in">
+          <span data-i18n="home_store_link">ストアを見る</span>
+        </a>
+      </div>
+      <div class="grid-4">
+        <article class="product-card fade-in" data-product data-product-id="p001"
+          data-product-name="NOIR — Black Edition" data-product-artist="Kenzo Yamada" data-product-price="28000"
+          data-product-img="images/product-noir.png">
+          <div class="product-card__img-wrap">
+            <img class="product-card__img" src="images/product-noir.png" alt="NOIR Black Edition">
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__artist">Kenzo Yamada</p>
+            <h3 class="product-card__name">NOIR — Black Edition</h3>
+            <p class="product-card__price">¥28,000</p>
+            <button class="product-card__add add-to-cart">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 5v14M5 12h14" />
+              </svg>
+              <span data-i18n="store_add_cart">カートに追加</span>
+            </button>
+          </div>
+        </article>
+        <article class="product-card fade-in" data-product data-product-id="p002" data-product-name="HANABI — Lavender"
+          data-product-artist="Mika Hana" data-product-price="18000" data-product-img="images/artist-mika.png">
+          <div class="product-card__img-wrap">
+            <img class="product-card__img" src="images/artist-mika.png" alt="HANABI Lavender">
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__artist">Mika Hana</p>
+            <h3 class="product-card__name">HANABI — Lavender</h3>
+            <p class="product-card__price">¥18,000</p>
+            <button class="product-card__add add-to-cart">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 5v14M5 12h14" />
+              </svg>
+              <span data-i18n="store_add_cart">カートに追加</span>
+            </button>
+          </div>
+        </article>
+        <article class="product-card fade-in" data-product data-product-id="p003"
+          data-product-name="YAKSHA — Bangkok Red" data-product-artist="Leo Rattana" data-product-price="45000"
+          data-product-img="images/artist-leo.png">
+          <div class="product-card__img-wrap">
+            <img class="product-card__img" src="images/artist-leo.png" alt="YAKSHA Bangkok Red">
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__artist">Leo Rattana</p>
+            <h3 class="product-card__name">YAKSHA — Bangkok Red</h3>
+            <p class="product-card__price">¥45,000</p>
+            <button class="product-card__add add-to-cart">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 5v14M5 12h14" />
+              </svg>
+              <span data-i18n="store_add_cart">カートに追加</span>
+            </button>
+          </div>
+        </article>
+        <article class="product-card fade-in" data-product data-product-id="p004" data-product-name="ONI — Navy Gold"
+          data-product-artist="Kenzo Yamada" data-product-price="38000" data-product-img="images/artist-kenzo.png">
+          <div class="product-card__img-wrap">
+            <img class="product-card__img" src="images/artist-kenzo.png" alt="ONI Navy Gold">
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__artist">Kenzo Yamada</p>
+            <h3 class="product-card__name">ONI — Navy Gold</h3>
+            <p class="product-card__price">¥38,000</p>
+            <button class="product-card__add add-to-cart">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 5v14M5 12h14" />
+              </svg>
+              <span data-i18n="store_add_cart">カートに追加</span>
+            </button>
+          </div>
+        </article>
+        <article class="product-card fade-in" data-product data-product-id="p006" data-product-name="LUMI — Mint Dream"
+          data-product-artist="Hana & Lumi" data-product-price="22000" data-product-img="images/artist-lumi.png">
+          <div class="product-card__img-wrap">
+            <img class="product-card__img" src="images/artist-lumi.png" alt="LUMI Mint Dream">
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__artist">Hana & Lumi</p>
+            <h3 class="product-card__name">LUMI — Mint Dream</h3>
+            <p class="product-card__price">¥22,000</p>
+            <button class="product-card__add add-to-cart">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 5v14M5 12h14" />
+              </svg>
+              <span data-i18n="store_add_cart">カートに追加</span>
+            </button>
+          </div>
+        </article>
+        <article class="product-card fade-in" data-product data-product-id="p007" data-product-name="GRIEF GANG — Kuma"
+          data-product-artist="K-GANG" data-product-price="41000" data-product-img="images/artist-kuma.png">
+          <div class="product-card__img-wrap">
+            <img class="product-card__img" src="images/artist-kuma.png" alt="GRIEF GANG Kuma">
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__artist">K-GANG</p>
+            <h3 class="product-card__name">GRIEF GANG — Kuma</h3>
+            <p class="product-card__price">¥41,000</p>
+            <button class="product-card__add add-to-cart">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 5v14M5 12h14" />
+              </svg>
+              <span data-i18n="store_add_cart">カートに追加</span>
+            </button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ ABOUT MANIFESTO ═══════════════════════════════════════ -->
+  <section class="section">
+    <div class="container--narrow" style="text-align:center; padding: var(--space-xl) var(--space-md);">
+      <p class="section-label fade-in" style="margin-bottom: var(--space-md);">Philosophy</p>
+      <blockquote class="fade-in"
+        style="font-family: var(--font-serif); font-size: clamp(1.3rem,3vw,2.2rem); font-weight:300; line-height:1.7; color:var(--gray-800); margin-bottom: var(--space-md);"
+        data-i18n-html="home_about_quote">
+        「余白」とは、奪い合うのではなく<br>補い合うための空間。
+      </blockquote>
+      <p class="fade-in" style="font-size:0.75rem; letter-spacing:0.25em; color:var(--gray-400);"
+        data-i18n="home_about_sub">— YOHAKUstudio</p>
+      <a href="about.html" class="btn fade-in" style="margin-top: var(--space-md);">
+        <span>Read More</span>
+      </a>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ NEWS ══════════════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-header__left">
+          <p class="section-header__num" data-i18n="home_news_label">03 — News</p>
+          <h2 class="section-header__title" data-i18n="home_news_title">お知らせ</h2>
+        </div>
+        <a href="news.html" class="btn fade-in">
+          <span data-i18n="home_news_link">すべてのニュースを見る</span>
+        </a>
+      </div>
+      <div>
+        <div class="news-item fade-in">
+          <div class="news-item__date">2025.11.20</div>
+          <div>
+            <span class="news-item__tag" data-i18n="news_tag_event">イベント</span>
+            <p class="news-item__title">Leo Rattana × YOHAKUstudio ポップアップ展示会 開催決定（東京・渋谷）</p>
+          </div>
+        </div>
+        <div class="news-item fade-in">
+          <div class="news-item__date">2025.11.05</div>
+          <div>
+            <span class="news-item__tag" data-i18n="news_tag_new">新着</span>
+            <p class="news-item__title">NOIR — Black Edition 入荷のお知らせ｜数量限定</p>
+          </div>
+        </div>
+        <div class="news-item fade-in">
+          <div class="news-item__date">2025.10.18</div>
+          <div>
+            <span class="news-item__tag" data-i18n="news_tag_collab">コラボ</span>
+            <p class="news-item__title">Mika Hana × 海外ブランド コラボレーション商品 詳細発表</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <p class="logo-text">YOHAKU studio</p>
+          <p data-i18n="footer_tagline">Art Toy × Global × Community</p>
+        </div>
+        <nav class="footer__nav">
+          <h4 data-i18n="footer_pages">ページ</h4>
+          <ul>
+            <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+            <li><a href="about.html" data-i18n="nav_about">About</a></li>
+            <li><a href="artists.html" data-i18n="nav_artists">Artists</a></li>
+            <li><a href="store.html" data-i18n="nav_store">Store</a></li>
+            <li><a href="news.html" data-i18n="nav_news">News</a></li>
+            <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__nav">
+          <h4 data-i18n="footer_legal">Legal</h4>
+          <ul>
+            <li><a href="#" data-i18n="footer_privacy">プライバシーポリシー</a></li>
+            <li><a href="#" data-i18n="footer_terms">利用規約</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <span data-i18n="footer_copy">© 2025 YOHAKUstudio. All rights reserved.</span>
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="jp">JP</button>
+          <span class="lang-sep">|</span>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <span class="lang-sep">|</span>
+          <button class="lang-btn" data-lang="th">TH</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══ CART DRAWER ═══════════════════════════════════════════ -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-label="Cart">
+    <div class="cart-drawer__header">
+      <p class="cart-drawer__title" data-i18n="cart_title">カート</p>
+      <button class="cart-drawer__close" id="cart-close" aria-label="Close">✕</button>
+    </div>
+    <div class="cart-drawer__body" id="cart-body"></div>
+    <div class="cart-drawer__footer">
+      <div class="cart-total">
+        <span class="cart-total__label" data-i18n="cart_total">小計</span>
+        <span class="cart-total__amount" id="cart-total-amount">¥0</span>
+      </div>
+      <button class="btn btn--filled cart-checkout-btn">
+        <span data-i18n="cart_checkout">チェックアウトへ</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ═══ ARTIST MODAL ══════════════════════════════════════════ -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog">
+    <div class="modal">
+      <button class="modal__close" id="modal-close" aria-label="Close">✕</button>
+      <div class="modal__img">
+        <img id="modal-img" src="" alt="">
+      </div>
+      <div class="modal__content">
+        <p class="section-label" id="modal-country"></p>
+        <h2 style="font-size:2rem;" id="modal-name"></h2>
+        <p class="body-sm" id="modal-genre"></p>
+        <hr class="divider" style="margin: var(--space-sm) 0;">
+        <p style="font-size:0.875rem; line-height:1.9; color:var(--gray-600);" id="modal-bio"></p>
+        <a href="artists.html" class="btn" style="margin-top:var(--space-sm);">
+          <span data-i18n="artists_view_works">作品を見る</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/hero-balls.js"></script>
+
+</body>
+
+</html>

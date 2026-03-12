@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="YOHAKUstudioについて — 余白の哲学とグローバルなアートエージェントとしての活動方針。">
+    <title>About — YOHAKU studio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header" id="header">
+        <a href="index.html" class="header__logo">
+            <img src="images/logo.png" alt="YOHAKU studio">
+        </a>
+        <nav class="nav">
+            <a href="index.html" class="nav__link" data-i18n="nav_home">Home</a>
+            <a href="about.html" class="nav__link" data-i18n="nav_about">About</a>
+            <a href="artists.html" class="nav__link" data-i18n="nav_artists">Artists</a>
+            <a href="store.html" class="nav__link" data-i18n="nav_store">Store</a>
+            <a href="news.html" class="nav__link" data-i18n="nav_news">News</a>
+            <a href="contact.html" class="nav__link" data-i18n="nav_contact">Contact</a>
+            <div class="lang-switcher">
+                <button class="lang-btn" data-lang="jp">JP</button>
+                <span class="lang-sep">|</span>
+                <button class="lang-btn" data-lang="en">EN</button>
+                <span class="lang-sep">|</span>
+                <button class="lang-btn" data-lang="th">TH</button>
+            </div>
+            <button class="cart-btn" id="cart-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <path d="M16 10a4 4 0 01-8 0" />
+                </svg>
+                <span data-i18n="nav_cart">カート</span>
+                <span class="cart-count" style="display:none">0</span>
+            </button>
+        </nav>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </header>
+    <nav class="mobile-nav" id="mobile-nav">
+        <a href="index.html" class="nav__link" data-i18n="nav_home">Home</a>
+        <a href="about.html" class="nav__link" data-i18n="nav_about">About</a>
+        <a href="artists.html" class="nav__link" data-i18n="nav_artists">Artists</a>
+        <a href="store.html" class="nav__link" data-i18n="nav_store">Store</a>
+        <a href="news.html" class="nav__link" data-i18n="nav_news">News</a>
+        <a href="contact.html" class="nav__link" data-i18n="nav_contact">Contact</a>
+        <div class="lang-switcher">
+            <button class="lang-btn" data-lang="jp">JP</button><span class="lang-sep">|</span>
+            <button class="lang-btn" data-lang="en">EN</button><span class="lang-sep">|</span>
+            <button class="lang-btn" data-lang="th">TH</button>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <p class="page-hero__label fade-in" data-i18n="about_label">About Us</p>
+            <h1 class="page-hero__title fade-in" data-i18n="about_title">余白の哲学</h1>
+        </div>
+    </section>
+
+    <!-- Manifesto -->
+    <section class="section">
+        <div style="text-align:center; overflow:hidden; padding: var(--space-md) 0; margin-bottom: var(--space-md);">
+            <span class="about-manifesto__word" aria-hidden="true">余白</span>
+        </div>
+        <div class="container--narrow">
+            <p class="about-manifesto__text fade-in" data-i18n="about_manifesto">
+                あるものを取り合うのではなく、空いた余白に自分にしかできないことで埋めていく。自分にはできないことは、周りの誰かがその余白を埋める。そうして世界中のアーティストもお客様も、それぞれの「余白」で輝ける場所をつくっていく。
+
+            </p>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- Values -->
+    <section class="section">
+        <div class="container">
+            <p class="section-label fade-in" style="margin-bottom: var(--space-md);">Our Values</p>
+            <div class="value-grid">
+                <div class="fade-in">
+                    <p class="value-item__num" data-i18n="about_v1_num">01</p>
+                    <h3 class="value-item__title" data-i18n="about_v1_title">余白に出会う</h3>
+                    <p class="value-item__text" data-i18n="about_v1_text">
+                        アーティストの創造性を最大限に引き出すために、YOHAKUstudioは余白との出会いを作ります。まだ見ぬアートとの出会いを作る場となります。</p>
+                </div>
+                <div class="fade-in">
+                    <p class="value-item__num" data-i18n="about_v2_num">02</p>
+                    <h3 class="value-item__title" data-i18n="about_v2_title">世界と繋がる</h3>
+                    <p class="value-item__text" data-i18n="about_v2_text">
+                        日本・タイ・世界各地のアーティストとのネットワークを通じて、独自の作品をグローバルな舞台へ届けます。</p>
+                </div>
+                <div class="fade-in">
+                    <p class="value-item__num" data-i18n="about_v3_num">03</p>
+                    <h3 class="value-item__title" data-i18n="about_v3_title">Win-Winの輪</h3>
+                    <p class="value-item__text" data-i18n="about_v3_text">
+                        アーティスト、コレクター、お客様、すべての関係者が豊かになれる「輪」を広げることが私たちのミッションです。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- Activities -->
+    <section class="section">
+        <div class="container">
+            <div class="grid-2" style="gap: var(--space-lg); align-items:center;">
+                <div class="fade-in">
+                    <p class="section-label" style="margin-bottom: var(--space-sm);">Activity</p>
+                    <h2 style="font-size:clamp(1.8rem,3vw,2.8rem); margin-bottom: var(--space-md);">
+                        グローバルエージェント<br>としての活動</h2>
+                    <p style="font-size:0.9rem; color:var(--gray-600); line-height:2; margin-bottom: var(--space-sm);">
+                        YOHAKUstudioは単なる販売店ではなく、アーティストの代理としてグローバルな舞台でのプロモーション・展示・流通を担うエージェントです。
+                    </p>
+                    <p style="font-size:0.9rem; color:var(--gray-600); line-height:2;">
+                        日本・タイを拠点に、ヨーロッパや北米のコレクターとのコネクションを持ち、アーティストの作品が最良の環境で届けられるよう全力でサポートします。
+                    </p>
+                    <a href="contact.html" class="btn" style="margin-top: var(--space-md);">
+                        <span>アーティストとして参加する</span>
+                    </a>
+                </div>
+                <div class="fade-in">
+                    <img src="images/museum-art-toys.png" alt="YOHAKU studio collection in a gallery"
+                        style="width:100%; aspect-ratio:4/3; object-fit:cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <p class="logo-text">YOHAKU studio</p>
+                    <p data-i18n="footer_tagline">Art Toy × Global × Community</p>
+                </div>
+                <nav class="footer__nav">
+                    <h4 data-i18n="footer_pages">ページ</h4>
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                        <li><a href="about.html" data-i18n="nav_about">About</a></li>
+                        <li><a href="artists.html" data-i18n="nav_artists">Artists</a></li>
+                        <li><a href="store.html" data-i18n="nav_store">Store</a></li>
+                        <li><a href="news.html" data-i18n="nav_news">News</a></li>
+                        <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer__nav">
+                    <h4 data-i18n="footer_legal">Legal</h4>
+                    <ul>
+                        <li><a href="#" data-i18n="footer_privacy">プライバシーポリシー</a></li>
+                        <li><a href="#" data-i18n="footer_terms">利用規約</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__bottom">
+                <span data-i18n="footer_copy">© 2025 YOHAKUstudio. All rights reserved.</span>
+                <div class="lang-switcher">
+                    <button class="lang-btn" data-lang="jp">JP</button><span class="lang-sep">|</span>
+                    <button class="lang-btn" data-lang="en">EN</button><span class="lang-sep">|</span>
+                    <button class="lang-btn" data-lang="th">TH</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-drawer" id="cart-drawer">
+        <div class="cart-drawer__header">
+            <p class="cart-drawer__title" data-i18n="cart_title">カート</p>
+            <button class="cart-drawer__close" id="cart-close">✕</button>
+        </div>
+        <div class="cart-drawer__body" id="cart-body"></div>
+        <div class="cart-drawer__footer">
+            <div class="cart-total">
+                <span class="cart-total__label" data-i18n="cart_total">小計</span>
+                <span class="cart-total__amount" id="cart-total-amount">¥0</span>
+            </div>
+            <button class="btn btn--filled cart-checkout-btn"><span data-i18n="cart_checkout">チェックアウトへ</span></button>
+        </div>
+    </aside>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

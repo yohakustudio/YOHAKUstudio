@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="YOHAKUstudio お問い合わせ — 購入・コラボレーション・アーティストエントリーはこちら。">
+    <title>Contact — YOHAKU studio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header" id="header">
+        <a href="index.html" class="header__logo"><img src="images/logo.png" alt="YOHAKU studio"></a>
+        <nav class="nav">
+            <a href="index.html" class="nav__link" data-i18n="nav_home">Home</a>
+            <a href="about.html" class="nav__link" data-i18n="nav_about">About</a>
+            <a href="artists.html" class="nav__link" data-i18n="nav_artists">Artists</a>
+            <a href="store.html" class="nav__link" data-i18n="nav_store">Store</a>
+            <a href="news.html" class="nav__link" data-i18n="nav_news">News</a>
+            <a href="contact.html" class="nav__link" data-i18n="nav_contact">Contact</a>
+            <div class="lang-switcher">
+                <button class="lang-btn" data-lang="jp">JP</button><span class="lang-sep">|</span>
+                <button class="lang-btn" data-lang="en">EN</button><span class="lang-sep">|</span>
+                <button class="lang-btn" data-lang="th">TH</button>
+            </div>
+            <button class="cart-btn" id="cart-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <path d="M16 10a4 4 0 01-8 0" />
+                </svg>
+                <span data-i18n="nav_cart">カート</span>
+                <span class="cart-count" style="display:none">0</span>
+            </button>
+        </nav>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </header>
+    <nav class="mobile-nav" id="mobile-nav">
+        <a href="index.html" class="nav__link" data-i18n="nav_home">Home</a>
+        <a href="about.html" class="nav__link" data-i18n="nav_about">About</a>
+        <a href="artists.html" class="nav__link" data-i18n="nav_artists">Artists</a>
+        <a href="store.html" class="nav__link" data-i18n="nav_store">Store</a>
+        <a href="news.html" class="nav__link" data-i18n="nav_news">News</a>
+        <a href="contact.html" class="nav__link" data-i18n="nav_contact">Contact</a>
+        <div class="lang-switcher">
+            <button class="lang-btn" data-lang="jp">JP</button><span class="lang-sep">|</span>
+            <button class="lang-btn" data-lang="en">EN</button><span class="lang-sep">|</span>
+            <button class="lang-btn" data-lang="th">TH</button>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <div class="container">
+            <p class="page-hero__label fade-in" data-i18n="contact_label">Contact</p>
+            <h1 class="page-hero__title fade-in" data-i18n="contact_title">お問い合わせ</h1>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="grid-2" style="gap: var(--space-xl); align-items:start;">
+
+                <!-- Left: Info -->
+                <div class="fade-in">
+                    <p style="font-size:0.9rem; line-height:2; color:var(--gray-600); margin-bottom: var(--space-lg);"
+                        data-i18n="contact_subtitle">
+                        作品のご購入・コラボレーション・アーティストエントリーなど、お気軽にお問い合わせください。
+                    </p>
+
+                    <div style="display:flex; flex-direction:column; gap: var(--space-md);">
+                        <div>
+                            <p class="section-label" style="margin-bottom:0.5rem;">Email</p>
+                            <a href="mailto:info@yohakustudio.com"
+                                style="font-family: var(--font-serif); font-size:1rem; transition: opacity 0.3s;"
+                                onmouseover="this.style.opacity='0.6'"
+                                onmouseout="this.style.opacity='1'">info@yohakustudio.com</a>
+                        </div>
+                        <div>
+                            <p class="section-label" style="margin-bottom:0.5rem;">Instagram</p>
+                            <a href="https://instagram.com/yohakustudio" target="_blank" rel="noopener"
+                                style="font-family: var(--font-serif); font-size:1rem; transition: opacity 0.3s;"
+                                onmouseover="this.style.opacity='0.6'"
+                                onmouseout="this.style.opacity='1'">@yohakustudio</a>
+                        </div>
+                        <div>
+                            <p class="section-label" style="margin-bottom:0.5rem;">Base</p>
+                            <p style="font-size:0.85rem; color:var(--gray-600);">Japan / Thailand</p>
+                        </div>
+                    </div>
+
+                    <!-- Artist CTA box -->
+                    <div class="fade-in"
+                        style="margin-top: var(--space-lg); padding: var(--space-md); border: 1px solid var(--gray-200); background: var(--gray-100);">
+                        <p class="section-label" style="margin-bottom:0.5rem;">Artist Entry</p>
+                        <p
+                            style="font-size:0.85rem; color:var(--gray-600); line-height:1.9; margin-bottom: var(--space-sm);">
+                            作品をお持ちのアーティストの方、YOHAKUstudioとの協力を希望される方は、種別を「アーティストエントリー」あるいはArtist
+                            Entryとしてお問い合わせください。お名前・活動国・SNSリンクもご記載ください。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right: Form -->
+                <div class="fade-in">
+                    <div id="form-success"
+                        style="display:none; padding: var(--space-md); border: 1px solid var(--gray-200); margin-bottom: var(--space-md); text-align:center;">
+                        <p style="font-family: var(--font-serif); font-size:1.1rem; margin-bottom:0.5rem;">Thank you.
+                        </p>
+                        <p class="body-sm" data-i18n="contact_success">お問い合わせを受け付けました。3営業日以内にご連絡いたします。</p>
+                    </div>
+
+                    <form id="contact-form" class="form" novalidate>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label class="form-label" for="contact-name" data-i18n="contact_name">お名前</label>
+                                <input class="form-input" type="text" id="contact-name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="contact-email" data-i18n="contact_email">メールアドレス</label>
+                                <input class="form-input" type="email" id="contact-email" name="email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="contact-type" data-i18n="contact_type">お問い合わせ種別</label>
+                            <select class="form-select" id="contact-type" name="type">
+                                <option value="purchase" data-i18n="contact_type_purchase">購入について</option>
+                                <option value="collab" data-i18n="contact_type_collab">コラボレーション</option>
+                                <option value="artist" data-i18n="contact_type_artist">アーティストエントリー</option>
+                                <option value="other" data-i18n="contact_type_other">その他</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="contact-message" data-i18n="contact_message">メッセージ</label>
+                            <textarea class="form-textarea" id="contact-message" name="message" rows="6"
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn--filled"
+                            style="align-self:flex-start; margin-top: var(--space-xs);">
+                            <span data-i18n="contact_send">送信する</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <p class="logo-text">YOHAKU studio</p>
+                    <p data-i18n="footer_tagline">Art Toy × Global × Community</p>
+                </div>
+                <nav class="footer__nav">
+                    <h4 data-i18n="footer_pages">ページ</h4>
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                        <li><a href="about.html" data-i18n="nav_about">About</a></li>
+                        <li><a href="artists.html" data-i18n="nav_artists">Artists</a></li>
+                        <li><a href="store.html" data-i18n="nav_store">Store</a></li>
+                        <li><a href="news.html" data-i18n="nav_news">News</a></li>
+                        <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer__nav">
+                    <h4 data-i18n="footer_legal">Legal</h4>
+                    <ul>
+                        <li><a href="#" data-i18n="footer_privacy">プライバシーポリシー</a></li>
+                        <li><a href="#" data-i18n="footer_terms">利用規約</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__bottom">
+                <span data-i18n="footer_copy">© 2025 YOHAKUstudio. All rights reserved.</span>
+                <div class="lang-switcher">
+                    <button class="lang-btn" data-lang="jp">JP</button><span class="lang-sep">|</span>
+                    <button class="lang-btn" data-lang="en">EN</button><span class="lang-sep">|</span>
+                    <button class="lang-btn" data-lang="th">TH</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-drawer" id="cart-drawer">
+        <div class="cart-drawer__header">
+            <p class="cart-drawer__title" data-i18n="cart_title">カート</p>
+            <button class="cart-drawer__close" id="cart-close">✕</button>
+        </div>
+        <div class="cart-drawer__body" id="cart-body"></div>
+        <div class="cart-drawer__footer">
+            <div class="cart-total">
+                <span class="cart-total__label" data-i18n="cart_total">小計</span>
+                <span class="cart-total__amount" id="cart-total-amount">¥0</span>
+            </div>
+            <button class="btn btn--filled cart-checkout-btn"><span data-i18n="cart_checkout">チェックアウトへ</span></button>
+        </div>
+    </aside>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="YOHAKUstudio チェックアウト">
+    <title>Checkout — YOHAKU studio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .checkout-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--space-xl) var(--space-md);
+        }
+
+        .checkout-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+        }
+
+        @media (min-width: 768px) {
+            .checkout-layout {
+                grid-template-columns: 1.5fr 1fr;
+            }
+        }
+
+        .checkout-form {
+            background: #fff;
+            padding: var(--space-md);
+            border: 1px solid var(--gray-200);
+        }
+
+        .form-group {
+            margin-bottom: var(--space-sm);
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+            color: var(--gray-800);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--gray-200);
+            font-family: inherit;
+            font-size: 1rem;
+            background: var(--bg-color);
+        }
+
+        .checkout-summary {
+            background: var(--gray-100);
+            padding: var(--space-md);
+            border: 1px solid var(--gray-200);
+            height: fit-content;
+        }
+
+        .checkout-summary__title {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            margin-bottom: var(--space-md);
+        }
+
+        .checkout-items {
+            margin-bottom: var(--space-md);
+            border-bottom: 1px solid var(--gray-200);
+            padding-bottom: var(--space-md);
+        }
+
+        .checkout-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .checkout-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .checkout-item__img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border: 1px solid var(--gray-200);
+            background: #fff;
+        }
+
+        .checkout-item__info {
+            flex: 1;
+        }
+
+        .checkout-item__name {
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 0.2rem;
+        }
+
+        .checkout-item__price {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+        }
+
+        .checkout-total-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.125rem;
+            font-weight: 500;
+            margin-top: var(--space-sm);
+        }
+
+        .cart-empty-msg {
+            text-align: center;
+            padding: var(--space-xl) 0;
+            color: var(--gray-600);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header" id="header"
+        style="position: static; background: var(--bg-color); border-bottom: 1px solid var(--gray-200);">
+        <a href="index.html" class="header__logo"><img src="images/logo.png" alt="YOHAKU studio"></a>
+        <nav class="nav">
+            <a href="store.html" class="nav__link">ストアに戻る</a>
+        </nav>
+    </header>
+
+    <main class="checkout-container">
+        <h1
+            style="font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3rem); margin-bottom: var(--space-lg); text-align: center;">
+            Checkout</h1>
+
+        <div id="checkout-content" class="checkout-layout">
+            <!-- Form will be injected or hidden by JS -->
+            <div class="checkout-form" id="checkout-form-section">
+                <h2 style="font-size: 1.25rem; margin-bottom: var(--space-md);">配送先・お支払い情報</h2>
+                <form id="checkout-form">
+                    <div class="form-group">
+                        <label for="email">メールアドレス</label>
+                        <input type="email" id="email" class="form-control" required
+                            placeholder="example@yohaku.studio">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">氏名</label>
+                        <input type="text" id="name" class="form-control" required placeholder="山田 太郎">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">配送先住所</label>
+                        <textarea id="address" class="form-control" rows="3" required placeholder="東京都..."></textarea>
+                    </div>
+                    <!-- ダミーのクレジットカード入力 -->
+                    <h3 style="font-size: 1rem; margin-top: var(--space-md); margin-bottom: var(--space-sm);">クレジットカード
+                    </h3>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="カード番号 (0000 0000 0000 0000)" disabled>
+                    </div>
+                    <div style="display: flex; gap: 1rem;">
+                        <input type="text" class="form-control" placeholder="MM/YY" disabled style="flex:1;">
+                        <input type="text" class="form-control" placeholder="CVC" disabled style="flex:1;">
+                    </div>
+
+                    <button type="submit" class="btn btn--filled"
+                        style="width: 100%; margin-top: var(--space-lg); justify-content: center;">
+                        <span>注文を確定する</span>
+                    </button>
+                    <p style="text-align:center; font-size:0.75rem; color:var(--gray-400); margin-top:1rem;">
+                        ※これはデモサイトのダミー決済画面です。</p>
+                </form>
+            </div>
+
+            <div class="checkout-summary" id="checkout-summary-section">
+                <h2 class="checkout-summary__title">注文内容</h2>
+                <div class="checkout-items" id="checkout-items">
+                    <!-- Items will be injected by JS -->
+                </div>
+                <div class="checkout-total">
+                    <div
+                        style="display:flex; justify-content:space-between; font-size:0.875rem; color:var(--gray-600); margin-bottom:0.5rem;">
+                        <span>小計</span>
+                        <span id="checkout-subtotal">¥0</span>
+                    </div>
+                    <div
+                        style="display:flex; justify-content:space-between; font-size:0.875rem; color:var(--gray-600); border-bottom:1px solid var(--gray-200); padding-bottom:1rem;">
+                        <span>送料</span>
+                        <span>計算中...</span>
+                    </div>
+                    <div class="checkout-total-row">
+                        <span>合計</span>
+                        <span id="checkout-total">¥0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" style="margin-top:0;">
+        <div class="container" style="text-align:center; padding: 2rem 0;">
+            <p style="font-size:0.75rem; color:var(--gray-400);">© 2025 YOHAKUstudio.</p>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cart = getCart();
+            const contentDiv = document.getElementById('checkout-content');
+
+            if (cart.length === 0) {
+                contentDiv.innerHTML = `
+                    <div class="cart-empty-msg" style="grid-column: 1 / -1;">
+                        <p style="font-size: 1.25rem; margin-bottom: 1rem;">カートは空です。</p>
+                        <a href="store.html" class="btn" style="justify-content: center; max-width: 200px; margin: 0 auto;">ストアでお買い物</a>
+                    </div>
+                `;
+                return;
+            }
+
+            const itemsContainer = document.getElementById('checkout-items');
+            let total = 0;
+
+            itemsContainer.innerHTML = cart.map(item => {
+                const itemTotal = item.price * item.qty;
+                total += itemTotal;
+                return `
+                    <div class="checkout-item">
+                        <img src="${item.img}" alt="${item.name}" class="checkout-item__img">
+                        <div class="checkout-item__info">
+                            <p class="checkout-item__name">${item.name}</p>
+                            <p class="checkout-item__price">¥${item.price.toLocaleString()} × ${item.qty}</p>
+                        </div>
+                        <div style="font-weight:500;">
+                            ¥${itemTotal.toLocaleString()}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            document.getElementById('checkout-subtotal').textContent = `¥${total.toLocaleString()}`;
+            document.getElementById('checkout-total').textContent = `¥${total.toLocaleString()}`;
+
+            // ダミー決済処理
+            document.getElementById('checkout-form').addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('注文が完了しました！（デモ）\\nストアトップへ戻ります。');
+                localStorage.removeItem('yohaku_cart');
+                window.location.href = 'store.html';
+            });
+        });
+    </script>
+</body>
+
+</html>
