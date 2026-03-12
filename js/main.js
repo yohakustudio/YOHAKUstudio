@@ -112,7 +112,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (modalName) modalName.textContent = card.dataset.name || '';
             if (modalCountry) modalCountry.textContent = card.dataset.country || '';
             if (modalGenre) modalGenre.textContent = card.dataset.genre || '';
-            if (modalBio) modalBio.innerHTML = card.dataset.bio || '';
+
+            if (modalBio) {
+                if (card.dataset.bioKey) {
+                    modalBio.innerHTML = t(card.dataset.bioKey);
+                } else {
+                    modalBio.innerHTML = card.dataset.bio || '';
+                }
+            }
 
             if (modalSns) {
                 modalSns.innerHTML = '';
