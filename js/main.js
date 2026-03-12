@@ -103,6 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalName = document.getElementById('modal-name');
     const modalCountry = document.getElementById('modal-country');
     const modalGenre = document.getElementById('modal-genre');
+    const modalBio = document.getElementById('modal-bio');
     const modalSns = document.getElementById('modal-sns');
 
     document.querySelectorAll('.artist-card[data-modal]').forEach(card => {
