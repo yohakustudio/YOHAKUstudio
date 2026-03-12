@@ -192,8 +192,15 @@ h4 {
 }
 
 .header__logo img {
-  height: 36px;
+  height: 60px;
   width: auto;
+  mix-blend-mode: multiply;
+  transition: filter 0.3s ease, mix-blend-mode 0.3s ease;
+}
+
+.header--dark:not(.scrolled) .header__logo img {
+  filter: invert(1);
+  mix-blend-mode: screen;
 }
 
 .header__logo-text {
