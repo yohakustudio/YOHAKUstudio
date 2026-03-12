@@ -147,6 +147,34 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // ── Lightbox (Product Image) ──────────────────────────────
+    const lightboxOverlay = document.getElementById('lightbox-overlay');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.getElementById('lightbox-close');
+
+    document.querySelectorAll('.product-card__img-wrap').forEach(wrap => {
+        wrap.addEventListener('click', () => {
+            const img = wrap.querySelector('img');
+            if (img && lightboxImg && lightboxOverlay) {
+                lightboxImg.src = img.src;
+                lightboxOverlay.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
+    lightboxClose?.addEventListener('click', () => {
+        lightboxOverlay?.classList.remove('open');
+        document.body.style.overflow = '';
+    });
+
+    lightboxOverlay?.addEventListener('click', (e) => {
+        if (e.target === lightboxOverlay) {
+            lightboxOverlay.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+    });
+
     // ── Contact form ──────────────────────────────────────────
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
@@ -166,6 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.key === 'Escape') {
             closeCart();
             modalOverlay?.classList.remove('open');
+            lightboxOverlay?.classList.remove('open');
             document.body.style.overflow = '';
         }
     });
