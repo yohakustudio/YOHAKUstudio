@@ -1234,7 +1234,7 @@ h4 {
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: var(--space-sm);
-  opacity: 0.85;
+  opacity: 0.6;
   transition: opacity 0.3s ease;
 }
 
