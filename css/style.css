@@ -1313,9 +1313,7 @@ h4 {
     grid-template-columns: 1fr;
   }
 
-  .modal__img {
-    display: none;
-  }
+  /* Photo is now shown on mobile, stacking above text due to container grid-template-columns: 1fr */
 
   .form-grid {
     grid-template-columns: 1fr;
