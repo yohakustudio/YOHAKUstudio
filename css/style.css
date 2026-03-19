@@ -1228,7 +1228,19 @@ h4 {
   margin-top: var(--space-lg);
 }
 
+.concept-card__img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: var(--space-sm);
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+}
 
+.concept-card__img:hover {
+  opacity: 1;
+}
 
 .value-item__num {
   font-size: 0.65rem;
