@@ -1103,6 +1103,12 @@ h4 {
   transform: rotate(90deg);
 }
 
+.product-card__add[disabled] {
+  color: var(--gray-400);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 /* ─── News ─────────────────────────────────────────────────── */
 .news-item {
   display: grid;
