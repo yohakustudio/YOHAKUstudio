@@ -4,7 +4,7 @@
 
 const translations = {
   jp: {
-    nav_home: 'Home', nav_about: 'About', nav_artists: 'Artists', nav_store: 'Store', nav_news: 'News', nav_contact: 'Contact', nav_cart: 'カート',
+    nav_home: 'Home', nav_about: 'About', nav_artists: 'Artists', nav_store: 'Store', nav_news: 'News', nav_gallery: 'Gallery', nav_contact: 'Contact', nav_cart: 'カート',
     hero_eyebrow: 'アート・トイ / ソフビ / デザイナーズトイ', hero_title: '余白が、世界を繋ぐ。', hero_subtitle: 'アーティストと出会い、アートと繋がる。', hero_cta: 'Explore Gallery',
     home_desc_label: '01 — Concept', home_desc_title: 'YOHAKU studio について',
     home_desc_s1_title: 'Gallery & Store', home_desc_s1_text: 'アートトイ、ソフビ、デザイナーズトイの販売。世界中の限定アート作品をあなたの元へお届けします。',
@@ -52,7 +52,7 @@ const translations = {
     news_item8_date: '2025.07.30', news_item8_title: 'アーティストエントリーの受け付けを開始しました。世界中のアーティストの応募を歓迎します。',
   },
   en: {
-    nav_home: 'Home', nav_about: 'About', nav_artists: 'Artists', nav_store: 'Store', nav_news: 'News', nav_contact: 'Contact', nav_cart: 'Cart',
+    nav_home: 'Home', nav_about: 'About', nav_artists: 'Artists', nav_store: 'Store', nav_news: 'News', nav_gallery: 'Gallery', nav_contact: 'Contact', nav_cart: 'Cart',
     hero_eyebrow: 'Art Toy / Sofubi / Designer Toy', hero_title: 'Space that connects the world.', hero_subtitle: 'Where art meets its collector.', hero_cta: 'Explore Gallery',
     home_desc_label: '01 — Concept', home_desc_title: 'About YOHAKU studio',
     home_desc_s1_title: 'Gallery & Store', home_desc_s1_text: 'Sales of art toys, sofubi, and designer toys. Delivering limited and unique artworks into your hands.',
@@ -100,7 +100,7 @@ const translations = {
     news_item8_date: '30.07.2025', news_item8_title: 'Artist entry is now open. We welcome applications from artists all over the world.',
   },
   th: {
-    nav_home: 'หน้าแรก', nav_about: 'เกี่ยวกับเรา', nav_artists: 'ศิลปิน', nav_store: 'ร้านค้า', nav_news: 'ข่าวสาร', nav_contact: 'ติดต่อ', nav_cart: 'ตะกร้า',
+    nav_home: 'หน้าแรก', nav_about: 'เกี่ยวกับเรา', nav_artists: 'ศิลปิน', nav_store: 'ร้านค้า', nav_news: 'ข่าวสาร', nav_gallery: 'Gallery', nav_contact: 'ติดต่อ', nav_cart: 'ตะกร้า',
     hero_eyebrow: 'อาร์ตทอย / โซฟูบิ / ดีไซเนอร์ทอย', hero_title: 'พื้นที่ว่าง เชื่อมโลก', hero_subtitle: 'พบศิลปิน สัมผัสงานศิลป์', hero_cta: 'สำรวจแกลเลอรี่',
     home_desc_label: '01 — แนวคิด', home_desc_title: 'เกี่ยวกับ YOHAKU studio',
     home_desc_s1_title: 'Gallery & Store', home_desc_s1_text: 'จำหน่ายอาร์ตทอย โซฟูบิ และดีไซเนอร์ทอย นำส่งผลงานศิลปะรุ่นจำกัดจากทั่วโลกถึงมือคุณ',

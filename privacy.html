@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="YOHAKU studio プライバシーポリシー">
+    <title>プライバシーポリシー — YOHAKU studio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .privacy-body { max-width: 720px; margin: 0 auto; padding: var(--space-xl) var(--space-md); }
+        .privacy-body h2 { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 400; margin: var(--space-lg) 0 var(--space-xs); border-bottom: 1px solid var(--gray-200); padding-bottom: 0.4rem; }
+        .privacy-body p, .privacy-body li { font-size: 0.88rem; line-height: 1.85; color: var(--gray-600); }
+        .privacy-body ul { padding-left: 1.2em; margin: 0.5rem 0; }
+        .privacy-body .updated { font-size: 0.75rem; color: var(--gray-400); margin-bottom: var(--space-lg); }
+        .lang-tabs { display: flex; gap: 0.5rem; margin-bottom: var(--space-lg); }
+        .lang-tab { background: none; border: 1px solid var(--gray-300); padding: 0.3rem 0.9rem; font-size: 0.75rem; letter-spacing: 0.1em; cursor: pointer; transition: all 0.2s; }
+        .lang-tab.active, .lang-tab:hover { background: var(--black); color: var(--white); border-color: var(--black); }
+        .privacy-content { display: none; }
+        .privacy-content.active { display: block; }
+    </style>
+</head>
+
+<body>
+
+    <header class="header" id="header">
+        <a href="index.html" class="header__logo"><img src="images/logo-zen.jpg" alt="YOHAKU studio"></a>
+        <nav class="nav">
+            <a href="index.html" class="nav__link" data-i18n="nav_home">Home</a>
+            <a href="about.html" class="nav__link" data-i18n="nav_about">About</a>
+            <a href="artists.html" class="nav__link" data-i18n="nav_artists">Artists</a>
+            <a href="store.html" class="nav__link" data-i18n="nav_store">Store</a>
+            <a href="news.html" class="nav__link" data-i18n="nav_news">News</a>
+            <a href="gallery.html" class="nav__link" data-i18n="nav_gallery">Gallery</a>
+            <a href="contact.html" class="nav__link" data-i18n="nav_contact">Contact</a>
+            <div class="lang-switcher">
+                <button class="lang-btn" data-lang="jp">JP</button><span class="lang-sep">|</span>
+                <button class="lang-btn" data-lang="en">EN</button><span class="lang-sep">|</span>
+                <button class="lang-btn" data-lang="th">TH</button>
+            </div>
+            <button class="cart-btn" id="cart-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <path d="M16 10a4 4 0 01-8 0" />
+                </svg>
+                <span data-i18n="nav_cart">カート</span>
+                <span class="cart-count" style="display:none">0</span>
+            </button>
+        </nav>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </header>
+    <nav class="mobile-nav" id="mobile-nav">
+        <a href="index.html" class="nav__link" data-i18n="nav_home">Home</a>
+        <a href="about.html" class="nav__link" data-i18n="nav_about">About</a>
+        <a href="artists.html" class="nav__link" data-i18n="nav_artists">Artists</a>
+        <a href="store.html" class="nav__link" data-i18n="nav_store">Store</a>
+        <a href="news.html" class="nav__link" data-i18n="nav_news">News</a>
+        <a href="gallery.html" class="nav__link" data-i18n="nav_gallery">Gallery</a>
+        <a href="contact.html" class="nav__link" data-i18n="nav_contact">Contact</a>
+        <div class="lang-switcher">
+            <button class="lang-btn" data-lang="jp">JP</button><span class="lang-sep">|</span>
+            <button class="lang-btn" data-lang="en">EN</button><span class="lang-sep">|</span>
+            <button class="lang-btn" data-lang="th">TH</button>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <div class="container">
+            <p class="page-hero__label fade-in">Legal</p>
+            <h1 class="page-hero__title fade-in" id="privacy-page-title">プライバシーポリシー</h1>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="privacy-body">
+
+            <div class="lang-tabs">
+                <button class="lang-tab active" onclick="showPrivacy('jp')">日本語</button>
+                <button class="lang-tab" onclick="showPrivacy('en')">English</button>
+                <button class="lang-tab" onclick="showPrivacy('th')">ภาษาไทย</button>
+            </div>
+
+            <!-- Japanese -->
+            <div class="privacy-content active" id="privacy-jp">
+                <p class="updated">最終更新日：2026年3月25日</p>
+                <p>YOHAKUstudio（以下「当社」）は、お客様の個人情報の保護を重要な責務と考え、以下のプライバシーポリシーを定めます。</p>
+
+                <h2>1. 収集する情報</h2>
+                <p>当社は以下の情報をお客様からご提供いただく場合があります。</p>
+                <ul>
+                    <li>氏名・メールアドレス（お問い合わせフォーム入力時）</li>
+                    <li>購入に関する情報（お名前、配送先住所、決済情報）</li>
+                    <li>ウェブサイトの利用状況（アクセスログ、Cookieなど）</li>
+                </ul>
+
+                <h2>2. 情報の利用目的</h2>
+                <ul>
+                    <li>ご注文・お問い合わせへの対応</li>
+                    <li>商品の発送および配送状況のご連絡</li>
+                    <li>新商品やイベント情報のご案内（同意いただいた場合）</li>
+                    <li>サービスの改善およびウェブサイトの運営・分析</li>
+                </ul>
+
+                <h2>3. 第三者への提供</h2>
+                <p>当社は、以下の場合を除き、お客様の個人情報を第三者に提供・開示いたしません。</p>
+                <ul>
+                    <li>お客様の同意がある場合</li>
+                    <li>法令に基づく開示が必要な場合</li>
+                    <li>配送業者・決済サービス事業者など、業務委託先への必要最小限の提供</li>
+                </ul>
+
+                <h2>4. Cookieの使用</h2>
+                <p>当サイトではCookieを使用しています。Cookieはブラウザの設定により無効化できますが、一部のサービスが利用できなくなる場合があります。</p>
+
+                <h2>5. 個人情報の安全管理</h2>
+                <p>当社は、収集した個人情報の漏洩・滅失・毀損の防止のため、適切な安全管理措置を講じます。</p>
+
+                <h2>6. 開示・訂正・削除のご要望</h2>
+                <p>お客様ご自身の個人情報の開示・訂正・削除をご希望の場合は、下記お問い合わせ先までご連絡ください。</p>
+
+                <h2>7. お問い合わせ</h2>
+                <p>プライバシーポリシーに関するご質問は、<a href="contact.html" style="text-decoration:underline;">お問い合わせページ</a>よりご連絡ください。</p>
+                <p style="margin-top:1rem;">Email：yohakustudio111@gmail.com</p>
+            </div>
+
+            <!-- English -->
+            <div class="privacy-content" id="privacy-en">
+                <p class="updated">Last Updated: March 25, 2026</p>
+                <p>YOHAKUstudio ("we", "us", or "our") is committed to protecting your personal information. This Privacy Policy explains how we collect, use, and protect your data.</p>
+
+                <h2>1. Information We Collect</h2>
+                <ul>
+                    <li>Name and email address (when using contact forms)</li>
+                    <li>Purchase information (name, shipping address, payment details)</li>
+                    <li>Website usage data (access logs, cookies)</li>
+                </ul>
+
+                <h2>2. How We Use Your Information</h2>
+                <ul>
+                    <li>Responding to orders and inquiries</li>
+                    <li>Shipping products and providing delivery updates</li>
+                    <li>Sending information about new products and events (with consent)</li>
+                    <li>Improving our services and analyzing website performance</li>
+                </ul>
+
+                <h2>3. Sharing Your Information</h2>
+                <p>We do not share your personal information with third parties except in the following cases:</p>
+                <ul>
+                    <li>With your explicit consent</li>
+                    <li>When required by law</li>
+                    <li>With shipping carriers and payment processors as necessary</li>
+                </ul>
+
+                <h2>4. Cookies</h2>
+                <p>Our website uses cookies. You may disable cookies in your browser settings, though some features may not function properly as a result.</p>
+
+                <h2>5. Data Security</h2>
+                <p>We implement appropriate security measures to protect your personal information from unauthorized access, loss, or destruction.</p>
+
+                <h2>6. Your Rights</h2>
+                <p>You have the right to request access to, correction of, or deletion of your personal information. Please contact us to make such a request.</p>
+
+                <h2>7. Contact</h2>
+                <p>For questions about this Privacy Policy, please visit our <a href="contact.html" style="text-decoration:underline;">Contact Page</a>.</p>
+                <p style="margin-top:1rem;">Email: yohakustudio111@gmail.com</p>
+            </div>
+
+            <!-- Thai -->
+            <div class="privacy-content" id="privacy-th">
+                <p class="updated">อัปเดตล่าสุด: 25 มีนาคม 2026</p>
+                <p>YOHAKUstudio ("เรา") ให้ความสำคัญกับการปกป้องข้อมูลส่วนบุคคลของคุณ นโยบายความเป็นส่วนตัวนี้อธิบายวิธีที่เราเก็บรวบรวม ใช้ และปกป้องข้อมูลของคุณ</p>
+
+                <h2>1. ข้อมูลที่เราเก็บรวบรวม</h2>
+                <ul>
+                    <li>ชื่อและที่อยู่อีเมล (เมื่อใช้แบบฟอร์มติดต่อ)</li>
+                    <li>ข้อมูลการสั่งซื้อ (ชื่อ ที่อยู่จัดส่ง ข้อมูลการชำระเงิน)</li>
+                    <li>ข้อมูลการใช้งานเว็บไซต์ (บันทึกการเข้าถึง คุกกี้)</li>
+                </ul>
+
+                <h2>2. วัตถุประสงค์ในการใช้ข้อมูล</h2>
+                <ul>
+                    <li>ตอบสนองต่อคำสั่งซื้อและการสอบถาม</li>
+                    <li>จัดส่งสินค้าและแจ้งข้อมูลการจัดส่ง</li>
+                    <li>ส่งข้อมูลเกี่ยวกับสินค้าใหม่และกิจกรรม (ด้วยความยินยอมของคุณ)</li>
+                    <li>ปรับปรุงบริการและวิเคราะห์ประสิทธิภาพเว็บไซต์</li>
+                </ul>
+
+                <h2>3. การแบ่งปันข้อมูล</h2>
+                <p>เราจะไม่แบ่งปันข้อมูลส่วนบุคคลของคุณกับบุคคลภายนอก ยกเว้นในกรณีต่อไปนี้:</p>
+                <ul>
+                    <li>ด้วยความยินยอมของคุณ</li>
+                    <li>เมื่อกฎหมายกำหนด</li>
+                    <li>กับผู้ให้บริการขนส่งและชำระเงินตามที่จำเป็น</li>
+                </ul>
+
+                <h2>4. คุกกี้</h2>
+                <p>เว็บไซต์ของเราใช้คุกกี้ คุณสามารถปิดการใช้งานคุกกี้ในการตั้งค่าเบราว์เซอร์ แต่อาจส่งผลให้บางฟีเจอร์ไม่ทำงาน</p>
+
+                <h2>5. ความปลอดภัยของข้อมูล</h2>
+                <p>เราใช้มาตรการรักษาความปลอดภัยที่เหมาะสมเพื่อปกป้องข้อมูลส่วนบุคคลของคุณ</p>
+
+                <h2>6. สิทธิ์ของคุณ</h2>
+                <p>คุณมีสิทธิ์ขอเข้าถึง แก้ไข หรือลบข้อมูลส่วนบุคคลของคุณ กรุณาติดต่อเราเพื่อยื่นคำร้อง</p>
+
+                <h2>7. ติดต่อ</h2>
+                <p>สำหรับคำถามเกี่ยวกับนโยบายความเป็นส่วนตัว กรุณาเยี่ยมชม<a href="contact.html" style="text-decoration:underline;">หน้าติดต่อ</a>ของเรา</p>
+                <p style="margin-top:1rem;">Email: yohakustudio111@gmail.com</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <p class="logo-text">YOHAKU studio</p>
+                    <p data-i18n="footer_tagline">Art Toy × Global × Community</p>
+                </div>
+                <nav class="footer__nav">
+                    <h4 data-i18n="footer_pages">ページ</h4>
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                        <li><a href="about.html" data-i18n="nav_about">About</a></li>
+                        <li><a href="artists.html" data-i18n="nav_artists">Artists</a></li>
+                        <li><a href="store.html" data-i18n="nav_store">Store</a></li>
+                        <li><a href="news.html" data-i18n="nav_news">News</a></li>
+                        <li><a href="gallery.html" data-i18n="nav_gallery">Gallery</a></li>
+                        <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer__nav">
+                    <h4 data-i18n="footer_legal">Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html" data-i18n="footer_privacy">プライバシーポリシー</a></li>
+                        <li><a href="#" data-i18n="footer_terms">利用規約</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__bottom">
+                <span data-i18n="footer_copy">© 2025 YOHAKUstudio. All rights reserved.</span>
+                <div class="lang-switcher">
+                    <button class="lang-btn" data-lang="jp">JP</button><span class="lang-sep">|</span>
+                    <button class="lang-btn" data-lang="en">EN</button><span class="lang-sep">|</span>
+                    <button class="lang-btn" data-lang="th">TH</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-drawer" id="cart-drawer">
+        <div class="cart-drawer__header">
+            <p class="cart-drawer__title" data-i18n="cart_title">カート</p>
+            <button class="cart-drawer__close" id="cart-close">✕</button>
+        </div>
+        <div class="cart-drawer__body" id="cart-body"></div>
+        <div class="cart-drawer__footer">
+            <div class="cart-total">
+                <span class="cart-total__label" data-i18n="cart_total">小計</span>
+                <span class="cart-total__amount" id="cart-total-amount">¥0</span>
+            </div>
+            <button class="btn btn--filled cart-checkout-btn"><span data-i18n="cart_checkout">チェックアウトへ</span></button>
+        </div>
+    </aside>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        function showPrivacy(lang) {
+            document.querySelectorAll('.privacy-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active'));
+            document.getElementById('privacy-' + lang).classList.add('active');
+            event.currentTarget.classList.add('active');
+            const titles = { jp: 'プライバシーポリシー', en: 'Privacy Policy', th: 'นโยบายความเป็นส่วนตัว' };
+            document.getElementById('privacy-page-title').textContent = titles[lang];
+        }
+    </script>
+</body>
+
+</html>
