@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="YOHAKU studio 利用規約">
+    <title>利用規約 — YOHAKU studio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .privacy-body { max-width: 720px; margin: 0 auto; padding: var(--space-xl) var(--space-md); }
+        .privacy-body h2 { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 400; margin: var(--space-lg) 0 var(--space-xs); border-bottom: 1px solid var(--gray-200); padding-bottom: 0.4rem; }
+        .privacy-body p, .privacy-body li { font-size: 0.88rem; line-height: 1.85; color: var(--gray-600); }
+        .privacy-body ul { padding-left: 1.2em; margin: 0.5rem 0; }
+        .privacy-body .updated { font-size: 0.75rem; color: var(--gray-400); margin-bottom: var(--space-lg); }
+        .lang-tabs { display: flex; gap: 0.5rem; margin-bottom: var(--space-lg); }
+        .lang-tab { background: none; border: 1px solid var(--gray-300); padding: 0.3rem 0.9rem; font-size: 0.75rem; letter-spacing: 0.1em; cursor: pointer; transition: all 0.2s; }
+        .lang-tab.active, .lang-tab:hover { background: var(--black); color: var(--white); border-color: var(--black); }
+        .privacy-content { display: none; }
+        .privacy-content.active { display: block; }
+    </style>
+</head>
+
+<body>
+
+    <header class="header" id="header">
+        <a href="index.html" class="header__logo"><img src="images/logo-zen.jpg" alt="YOHAKU studio"></a>
+        <nav class="nav">
+            <a href="index.html" class="nav__link" data-i18n="nav_home">Home</a>
+            <a href="about.html" class="nav__link" data-i18n="nav_about">About</a>
+            <a href="artists.html" class="nav__link" data-i18n="nav_artists">Artists</a>
+            <a href="store.html" class="nav__link" data-i18n="nav_store">Store</a>
+            <a href="news.html" class="nav__link" data-i18n="nav_news">News</a>
+            <a href="gallery.html" class="nav__link" data-i18n="nav_gallery">Gallery</a>
+            <a href="contact.html" class="nav__link" data-i18n="nav_contact">Contact</a>
+            <div class="lang-switcher">
+                <button class="lang-btn" data-lang="jp">JP</button><span class="lang-sep">|</span>
+                <button class="lang-btn" data-lang="en">EN</button><span class="lang-sep">|</span>
+                <button class="lang-btn" data-lang="th">TH</button>
+            </div>
+            <button class="cart-btn" id="cart-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <path d="M16 10a4 4 0 01-8 0" />
+                </svg>
+                <span data-i18n="nav_cart">カート</span>
+                <span class="cart-count" style="display:none">0</span>
+            </button>
+        </nav>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </header>
+    <nav class="mobile-nav" id="mobile-nav">
+        <a href="index.html" class="nav__link" data-i18n="nav_home">Home</a>
+        <a href="about.html" class="nav__link" data-i18n="nav_about">About</a>
+        <a href="artists.html" class="nav__link" data-i18n="nav_artists">Artists</a>
+        <a href="store.html" class="nav__link" data-i18n="nav_store">Store</a>
+        <a href="news.html" class="nav__link" data-i18n="nav_news">News</a>
+        <a href="gallery.html" class="nav__link" data-i18n="nav_gallery">Gallery</a>
+        <a href="contact.html" class="nav__link" data-i18n="nav_contact">Contact</a>
+        <div class="lang-switcher">
+            <button class="lang-btn" data-lang="jp">JP</button><span class="lang-sep">|</span>
+            <button class="lang-btn" data-lang="en">EN</button><span class="lang-sep">|</span>
+            <button class="lang-btn" data-lang="th">TH</button>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <div class="container">
+            <p class="page-hero__label fade-in">Legal</p>
+            <h1 class="page-hero__title fade-in" id="terms-page-title">利用規約</h1>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="privacy-body">
+
+            <div class="lang-tabs">
+                <button class="lang-tab active" onclick="showTerms('jp', this)">日本語</button>
+                <button class="lang-tab" onclick="showTerms('en', this)">English</button>
+                <button class="lang-tab" onclick="showTerms('th', this)">ภาษาไทย</button>
+            </div>
+
+            <!-- Japanese -->
+            <div class="privacy-content active" id="terms-jp">
+                <p class="updated">最終更新日：2026年3月25日</p>
+                <p>本利用規約（以下「本規約」）は、YOHAKUstudio（以下「当社」）が運営するウェブサイトおよびオンラインストア（以下「本サービス」）の利用条件を定めるものです。本サービスをご利用いただくことで、本規約に同意したものとみなします。</p>
+
+                <h2>第1条（適用範囲）</h2>
+                <p>本規約は、本サービスを利用するすべてのユーザーに適用されます。当社は、予告なく本規約を変更することがあります。変更後も本サービスを継続してご利用いただいた場合、変更後の規約に同意したものとみなします。</p>
+
+                <h2>第2条（サービスの内容）</h2>
+                <p>当社は、アートトイ・ソフビ・デザイナーズトイのオンライン販売、アーティスト情報の発信、ギャラリー展示情報の提供などのサービスを提供します。サービス内容は予告なく変更・終了することがあります。</p>
+
+                <h2>第3条（購入・決済）</h2>
+                <ul>
+                    <li>商品の購入はオンラインストアより行えます。</li>
+                    <li>価格はすべて税込み表示です（別途記載がある場合を除く）。</li>
+                    <li>在庫状況により、ご注文をお受けできない場合があります。</li>
+                    <li>決済は当社指定の決済手段によるものとします。</li>
+                    <li>注文確定後のキャンセルは原則としてお受けできません。</li>
+                </ul>
+
+                <h2>第4条（返品・交換）</h2>
+                <ul>
+                    <li>商品の性質上（アート作品・限定品）、お客様都合による返品・交換はお受けできません。</li>
+                    <li>商品の初期不良・誤配送の場合は、到着後7日以内にご連絡ください。</li>
+                    <li>返品にかかる送料は、当社の責に帰する場合は当社が負担します。</li>
+                </ul>
+
+                <h2>第5条（配送）</h2>
+                <ul>
+                    <li>国内配送・海外配送ともに対応しております。</li>
+                    <li>配送日数は目安であり、交通事情・天候・税関審査等により遅延することがあります。</li>
+                    <li>海外への発送の場合、関税・輸入税はお客様のご負担となります。</li>
+                </ul>
+
+                <h2>第6条（知的財産権）</h2>
+                <p>本サービス上に掲載されたすべてのコンテンツ（画像・テキスト・デザイン・商品写真等）の著作権は、当社またはアーティストに帰属します。無断転載・複製・二次利用を禁じます。</p>
+
+                <h2>第7条（禁止事項）</h2>
+                <p>ユーザーは以下の行為を行ってはなりません。</p>
+                <ul>
+                    <li>法令または本規約に違反する行為</li>
+                    <li>本サービスの運営を妨害する行為</li>
+                    <li>他のユーザーや第三者への迷惑行為・誹謗中傷</li>
+                    <li>商業目的での無断転載・コンテンツの利用</li>
+                    <li>不正アクセスやシステムへの攻撃</li>
+                </ul>
+
+                <h2>第8条（免責事項）</h2>
+                <p>当社は、本サービスに関連してユーザーに生じた損害について、当社の故意または重大な過失による場合を除き、一切の責任を負いません。また、第三者が提供するサービスや外部リンクについて責任を負いません。</p>
+
+                <h2>第9条（サービスの変更・終了）</h2>
+                <p>当社は、ユーザーへの事前通知なしに本サービスの内容を変更、または提供を終了することができます。これによりユーザーに生じた損害について、当社は責任を負いません。</p>
+
+                <h2>第10条（準拠法・管轄）</h2>
+                <p>本規約は日本法に準拠します。本サービスに関する紛争については、当社所在地を管轄する裁判所を専属的合意管轄裁判所とします。</p>
+
+                <h2>お問い合わせ</h2>
+                <p>本規約に関するご質問は、<a href="contact.html" style="text-decoration:underline;">お問い合わせページ</a>よりご連絡ください。</p>
+                <p style="margin-top:1rem;">Email：yohakustudio111@gmail.com</p>
+            </div>
+
+            <!-- English -->
+            <div class="privacy-content" id="terms-en">
+                <p class="updated">Last Updated: March 25, 2026</p>
+                <p>These Terms of Service ("Terms") govern your use of the website and online store operated by YOHAKUstudio ("we", "us", or "our"). By using our service, you agree to these Terms.</p>
+
+                <h2>Article 1 – Scope of Application</h2>
+                <p>These Terms apply to all users of our service. We reserve the right to modify these Terms at any time without prior notice. Continued use of our service after any changes constitutes your acceptance of the updated Terms.</p>
+
+                <h2>Article 2 – Service Description</h2>
+                <p>We provide online sales of art toys, sofubi, and designer toys, as well as artist information and gallery exhibition content. The content of our services may be changed or discontinued without notice.</p>
+
+                <h2>Article 3 – Purchases and Payment</h2>
+                <ul>
+                    <li>Products can be purchased through our online store.</li>
+                    <li>All prices are tax-inclusive unless otherwise stated.</li>
+                    <li>Orders may not be accepted due to stock availability.</li>
+                    <li>Payment must be made via the payment methods designated by us.</li>
+                    <li>Order cancellations after confirmation are generally not accepted.</li>
+                </ul>
+
+                <h2>Article 4 – Returns and Exchanges</h2>
+                <ul>
+                    <li>Due to the nature of our products (art pieces and limited editions), returns or exchanges for customer preference are not accepted.</li>
+                    <li>In the case of initial defects or incorrect delivery, please contact us within 7 days of arrival.</li>
+                    <li>Return shipping costs will be covered by us where the fault lies with us.</li>
+                </ul>
+
+                <h2>Article 5 – Shipping</h2>
+                <ul>
+                    <li>We ship both domestically (Japan) and internationally.</li>
+                    <li>Delivery times are estimates and may be delayed due to traffic, weather, or customs processing.</li>
+                    <li>For international orders, customs duties and import taxes are the responsibility of the buyer.</li>
+                </ul>
+
+                <h2>Article 6 – Intellectual Property</h2>
+                <p>All content on this service (images, text, designs, product photos, etc.) is the intellectual property of YOHAKUstudio or the respective artists. Unauthorized reproduction, copying, or secondary use is strictly prohibited.</p>
+
+                <h2>Article 7 – Prohibited Activities</h2>
+                <p>Users must not engage in the following:</p>
+                <ul>
+                    <li>Violating laws or these Terms</li>
+                    <li>Interfering with the operation of our service</li>
+                    <li>Harassing or defaming other users or third parties</li>
+                    <li>Unauthorized reproduction of content for commercial purposes</li>
+                    <li>Unauthorized access or attacks on our systems</li>
+                </ul>
+
+                <h2>Article 8 – Disclaimer</h2>
+                <p>We are not liable for any damages arising from your use of this service except in cases of our intentional misconduct or gross negligence. We are also not responsible for third-party services or external links.</p>
+
+                <h2>Article 9 – Changes and Termination</h2>
+                <p>We may change or terminate our service at any time without prior notice to users. We accept no responsibility for any loss or damage caused by such changes or termination.</p>
+
+                <h2>Article 10 – Governing Law and Jurisdiction</h2>
+                <p>These Terms are governed by the laws of Japan. Any disputes shall be subject to the exclusive jurisdiction of the court with jurisdiction over our place of business.</p>
+
+                <h2>Contact</h2>
+                <p>For questions about these Terms, please visit our <a href="contact.html" style="text-decoration:underline;">Contact Page</a>.</p>
+                <p style="margin-top:1rem;">Email: yohakustudio111@gmail.com</p>
+            </div>
+
+            <!-- Thai -->
+            <div class="privacy-content" id="terms-th">
+                <p class="updated">อัปเดตล่าสุด: 25 มีนาคม 2026</p>
+                <p>ข้อกำหนดการใช้งาน ("ข้อกำหนด") เหล่านี้ควบคุมการใช้งานเว็บไซต์และร้านค้าออนไลน์ที่ดำเนินการโดย YOHAKUstudio ("เรา") การใช้บริการของเราถือว่าคุณยอมรับข้อกำหนดเหล่านี้</p>
+
+                <h2>ข้อ 1 – ขอบเขตการบังคับใช้</h2>
+                <p>ข้อกำหนดเหล่านี้ใช้กับผู้ใช้งานทุกคน เราสงวนสิทธิ์ในการแก้ไขข้อกำหนดเหล่านี้ได้ตลอดเวลาโดยไม่ต้องแจ้งล่วงหน้า การใช้งานต่อเนื่องหลังจากการเปลี่ยนแปลงถือว่าคุณยอมรับข้อกำหนดที่อัปเดต</p>
+
+                <h2>ข้อ 2 – รายละเอียดบริการ</h2>
+                <p>เราให้บริการจำหน่ายอาร์ตทอย โซฟูบิ และดีไซเนอร์ทอยออนไลน์ รวมถึงข้อมูลศิลปินและเนื้อหานิทรรศการ เนื้อหาบริการอาจเปลี่ยนแปลงหรือยุติได้โดยไม่ต้องแจ้งล่วงหน้า</p>
+
+                <h2>ข้อ 3 – การซื้อและการชำระเงิน</h2>
+                <ul>
+                    <li>สามารถซื้อสินค้าได้ผ่านร้านค้าออนไลน์ของเรา</li>
+                    <li>ราคาทั้งหมดรวมภาษีแล้ว เว้นแต่จะระบุไว้เป็นอย่างอื่น</li>
+                    <li>คำสั่งซื้ออาจไม่ได้รับการยอมรับเนื่องจากสต็อกสินค้า</li>
+                    <li>การชำระเงินต้องทำผ่านวิธีการชำระเงินที่เรากำหนด</li>
+                    <li>โดยทั่วไปไม่รับการยกเลิกคำสั่งซื้อหลังจากการยืนยัน</li>
+                </ul>
+
+                <h2>ข้อ 4 – การคืนและการแลกเปลี่ยน</h2>
+                <ul>
+                    <li>เนื่องจากลักษณะของสินค้า (งานศิลปะและรุ่นจำกัด) ไม่รับคืนหรือแลกเปลี่ยนตามความต้องการของลูกค้า</li>
+                    <li>ในกรณีที่สินค้าชำรุดตั้งแต่ต้นหรือส่งผิด กรุณาติดต่อเราภายใน 7 วันหลังได้รับ</li>
+                    <li>ค่าจัดส่งคืนจะเป็นความรับผิดชอบของเราในกรณีที่ความผิดพลาดเกิดจากเรา</li>
+                </ul>
+
+                <h2>ข้อ 5 – การจัดส่ง</h2>
+                <ul>
+                    <li>เราจัดส่งทั้งในประเทศ (ญี่ปุ่น) และต่างประเทศ</li>
+                    <li>ระยะเวลาการจัดส่งเป็นการประมาณการและอาจล่าช้าเนื่องจากการจราจร สภาพอากาศ หรือการตรวจสอบศุลกากร</li>
+                    <li>สำหรับคำสั่งซื้อระหว่างประเทศ ภาษีนำเข้าและภาษีศุลกากรเป็นความรับผิดชอบของผู้ซื้อ</li>
+                </ul>
+
+                <h2>ข้อ 6 – ทรัพย์สินทางปัญญา</h2>
+                <p>เนื้อหาทั้งหมดในบริการนี้ (รูปภาพ ข้อความ การออกแบบ ภาพถ่ายสินค้า ฯลฯ) เป็นทรัพย์สินทางปัญญาของ YOHAKUstudio หรือศิลปินที่เกี่ยวข้อง ห้ามทำซ้ำ คัดลอก หรือนำไปใช้ต่อโดยไม่ได้รับอนุญาต</p>
+
+                <h2>ข้อ 7 – กิจกรรมที่ต้องห้าม</h2>
+                <p>ผู้ใช้ต้องไม่กระทำสิ่งต่อไปนี้:</p>
+                <ul>
+                    <li>ละเมิดกฎหมายหรือข้อกำหนดเหล่านี้</li>
+                    <li>รบกวนการดำเนินงานของบริการเรา</li>
+                    <li>คุกคามหรือใส่ร้ายผู้ใช้รายอื่นหรือบุคคลที่สาม</li>
+                    <li>ทำซ้ำเนื้อหาโดยไม่ได้รับอนุญาตเพื่อวัตถุประสงค์เชิงพาณิชย์</li>
+                    <li>เข้าถึงโดยไม่ได้รับอนุญาตหรือโจมตีระบบของเรา</li>
+                </ul>
+
+                <h2>ข้อ 8 – ข้อจำกัดความรับผิด</h2>
+                <p>เราไม่รับผิดชอบต่อความเสียหายใดๆ ที่เกิดจากการใช้งานบริการนี้ ยกเว้นในกรณีที่เกิดจากการกระทำโดยเจตนาหรือประมาทเลินเล่ออย่างร้ายแรงของเรา</p>
+
+                <h2>ข้อ 9 – การเปลี่ยนแปลงและการยุติ</h2>
+                <p>เราอาจเปลี่ยนแปลงหรือยุติบริการได้ตลอดเวลาโดยไม่ต้องแจ้งล่วงหน้า เราไม่รับผิดชอบต่อความสูญเสียหรือความเสียหายที่เกิดจากการเปลี่ยนแปลงหรือการยุติดังกล่าว</p>
+
+                <h2>ข้อ 10 – กฎหมายที่ใช้บังคับและเขตอำนาจศาล</h2>
+                <p>ข้อกำหนดเหล่านี้อยู่ภายใต้กฎหมายของญี่ปุ่น ข้อพิพาทใดๆ จะอยู่ภายใต้เขตอำนาจศาลพิเศษของศาลที่มีอำนาจเหนือสถานที่ประกอบการของเรา</p>
+
+                <h2>ติดต่อ</h2>
+                <p>หากมีคำถามเกี่ยวกับข้อกำหนดเหล่านี้ กรุณาเยี่ยมชม<a href="contact.html" style="text-decoration:underline;">หน้าติดต่อ</a>ของเรา</p>
+                <p style="margin-top:1rem;">Email: yohakustudio111@gmail.com</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <p class="logo-text">YOHAKU studio</p>
+                    <p data-i18n="footer_tagline">Art Toy × Global × Community</p>
+                </div>
+                <nav class="footer__nav">
+                    <h4 data-i18n="footer_pages">ページ</h4>
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                        <li><a href="about.html" data-i18n="nav_about">About</a></li>
+                        <li><a href="artists.html" data-i18n="nav_artists">Artists</a></li>
+                        <li><a href="store.html" data-i18n="nav_store">Store</a></li>
+                        <li><a href="news.html" data-i18n="nav_news">News</a></li>
+                        <li><a href="gallery.html" data-i18n="nav_gallery">Gallery</a></li>
+                        <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer__nav">
+                    <h4 data-i18n="footer_legal">Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html" data-i18n="footer_privacy">プライバシーポリシー</a></li>
+                        <li><a href="terms.html" data-i18n="footer_terms">利用規約</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__bottom">
+                <span data-i18n="footer_copy">© 2025 YOHAKUstudio. All rights reserved.</span>
+                <div class="lang-switcher">
+                    <button class="lang-btn" data-lang="jp">JP</button><span class="lang-sep">|</span>
+                    <button class="lang-btn" data-lang="en">EN</button><span class="lang-sep">|</span>
+                    <button class="lang-btn" data-lang="th">TH</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-drawer" id="cart-drawer">
+        <div class="cart-drawer__header">
+            <p class="cart-drawer__title" data-i18n="cart_title">カート</p>
+            <button class="cart-drawer__close" id="cart-close">✕</button>
+        </div>
+        <div class="cart-drawer__body" id="cart-body"></div>
+        <div class="cart-drawer__footer">
+            <div class="cart-total">
+                <span class="cart-total__label" data-i18n="cart_total">小計</span>
+                <span class="cart-total__amount" id="cart-total-amount">¥0</span>
+            </div>
+            <button class="btn btn--filled cart-checkout-btn"><span data-i18n="cart_checkout">チェックアウトへ</span></button>
+        </div>
+    </aside>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        function showTerms(lang, btn) {
+            document.querySelectorAll('.privacy-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.lang-tab').forEach(el => el.classList.remove('active'));
+            document.getElementById('terms-' + lang).classList.add('active');
+            btn.classList.add('active');
+            const titles = { jp: '利用規約', en: 'Terms of Service', th: 'ข้อกำหนดการใช้งาน' };
+            document.getElementById('terms-page-title').textContent = titles[lang];
+        }
+    </script>
+</body>
+
+</html>
