@@ -82,6 +82,23 @@ document.addEventListener('DOMContentLoaded', () => {
     cartClose?.addEventListener('click', closeCart);
     cartOverlay?.addEventListener('click', closeCart);
 
+    // ── Pre-filter store by artist from URL ───────────────────
+    const urlParams = new URLSearchParams(window.location.search);
+    const artistFilter = urlParams.get('artist');
+    
+    if (artistFilter) {
+        document.querySelectorAll('.product-card[data-product]').forEach(card => {
+            if (card.dataset.productArtist !== artistFilter) {
+                card.style.display = 'none';
+            }
+        });
+        
+        // Remove active class from category tabs to show a filtered view
+        setTimeout(() => {
+            document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+        }, 50);
+    }
+
     // ── Filter tabs ───────────────────────────────────────────
     document.querySelectorAll('.filter-tab').forEach(tab => {
         tab.addEventListener('click', () => {
@@ -108,7 +125,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.artist-card[data-modal]').forEach(card => {
         card.addEventListener('click', () => {
-            if (modalImg) modalImg.src = card.dataset.img || '';
+            if (modalImg) {
+                modalImg.src = card.dataset.img || '';
+                if (card.dataset.modalContain === 'true') {
+                    modalImg.style.objectFit = 'contain';
+                    modalImg.style.width = '85%';
+                    modalImg.style.height = '85%';
+                } else {
+                    modalImg.style.objectFit = '';
+                    modalImg.style.width = '';
+                    modalImg.style.height = '';
+                }
+            }
             if (modalName) modalName.textContent = card.dataset.name || '';
             if (modalCountry) modalCountry.textContent = card.dataset.country || '';
             if (modalGenre) modalGenre.textContent = card.dataset.genre || '';
@@ -128,6 +156,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 if (card.dataset.snsX) {
                     modalSns.innerHTML += `<a href="${card.dataset.snsX}" target="_blank" rel="noopener" class="modal__sns-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>`;
+                }
+            }
+
+            const modalStoreLink = document.getElementById('modal-store-link');
+            if (modalStoreLink) {
+                if (card.dataset.name) {
+                    modalStoreLink.href = `store.html?artist=${encodeURIComponent(card.dataset.name)}`;
+                } else {
+                    modalStoreLink.href = 'store.html';
                 }
             }
 
