@@ -763,6 +763,8 @@ h4 {
   align-items: center;
   justify-content: center;
   aspect-ratio: 1 / 1;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .modal__img img {
